@@ -1,0 +1,99 @@
+#include <CapacitiveSensor.h>
+CapacitiveSensor C = CapacitiveSensor(2, 3);
+CapacitiveSensor Cs = CapacitiveSensor(2, 4);
+CapacitiveSensor D = CapacitiveSensor(2, 5);
+CapacitiveSensor Eb = CapacitiveSensor(2, 6);
+CapacitiveSensor E = CapacitiveSensor(2, 7);
+CapacitiveSensor F = CapacitiveSensor(2, 8);
+CapacitiveSensor Fs = CapacitiveSensor(2, 9);
+CapacitiveSensor G = CapacitiveSensor(2, 10);
+//CapacitiveSensor Gs = CapacitiveSensor(2, 11);
+//CapacitiveSensor A = CapacitiveSensor(2, 12);
+//CapacitiveSensor Bb = CapacitiveSensor(2, 13);
+//CapacitiveSensor B = CapacitiveSensor(2, 14);
+//CapacitiveSensor C1 = CapacitiveSensor(2, 15);
+
+int value = 0;
+int value2 = 0;
+int value3 = 0;
+int value4 = 0;
+int value5 = 0;
+int value6 = 0;
+int value7 = 0;
+int value8 = 0;
+
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  long total1 =  C.capacitiveSensor(30);
+  long total2 =  Cs.capacitiveSensor(30);
+  long total3 =  D.capacitiveSensor(30);
+  long total4 =  Eb.capacitiveSensor(30);
+  long total5 =  E.capacitiveSensor(30);
+  long total6 =  F.capacitiveSensor(30);
+  long total7 =  Fs.capacitiveSensor(30);
+  long total8 =  G.capacitiveSensor(30);
+  //long total9 =  Gs.capacitiveSensor(30);
+  //long total10 =  A.capacitiveSensor(30);
+  //long total11 =  Bb.capacitiveSensor(30);
+  //long total12 =  B.capacitiveSensor(30);
+  //long total13 =  C1.capacitiveSensor(30);
+  if (total1 > 3000) {
+    value = 1;
+  } else {
+    value = 0;
+  }
+  if (total2 > 3000) {
+    value2 = 1;
+  } else {
+    value2 = 0;
+  }
+  if (total3 > 3000) {
+    value3 = 1;
+  } else {
+    value3 = 0;
+  }
+  if (total4 > 3000) {
+    value4 = 1;
+  } else {
+    value4 = 0;
+  }
+  if (total5 > 3000) {
+    value5 = 1;
+  } else {
+    value5 = 0;
+  }
+  if (total6 > 3000) {
+    value6 = 1;
+  } else {
+    value6 = 0;
+  }
+  if (total7 > 3000) {
+    value7 = 1;
+  } else {
+    value7 = 0;
+  } if (total8 > 3000) {
+    value8 = 1;
+  } else {
+    value8 = 0;
+  }
+  Serial.print(value);                  // print sensor output 1
+  Serial.print(",");
+  Serial.print(value2);                  // print sensor output 2
+  Serial.print(",");
+  Serial.print(value3);                // print sensor output 3
+  Serial.print(",");
+  Serial.print(value4);                  // print sensor output 1
+  Serial.print(",");
+  Serial.print(value5);                  // print sensor output 2
+  Serial.print(",");
+  Serial.print(value6);                // print sensor output 3
+  Serial.print(",");
+  Serial.print(value7);                  // print sensor output 1
+  Serial.print(",");
+  Serial.println(value8);                  // print sensor output 2
+
+  delay(3);                             // arbitrary delay to limit data to serial port
+}
