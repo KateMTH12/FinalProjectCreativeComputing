@@ -21,7 +21,6 @@ var flowfield;
 
 var alph = 60;
 
-var font;
 var C;
 var CS;
 var D;
@@ -58,10 +57,7 @@ var c5;
 
 var level = 0;
 
-var letter = " ";
-
 function preload() {
-  font = loadFont('KalamBold.ttf')
   c = loadSound('C.wav');
   cs = loadSound('Cs.wav');
   d = loadSound('D.wav');
