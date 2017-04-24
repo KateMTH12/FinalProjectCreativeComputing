@@ -132,7 +132,6 @@ function preload() {
 }
 
 function setup() {
-  /*
     serial = new p5.SerialPort(); // make a new instance of the serialport library
     serial.on('list', printList); // set a callback function for the serialport list event
     serial.on('connected', serverConnected); // callback for connecting to the server
@@ -143,22 +142,22 @@ function setup() {
     var options = {
     baudrate: 9600
   };
-  */
+  
   ellipseMode(CENTER);
 
   osc = new p5.Oscillator('Triangle');
-  //serial.list(); // list the serial ports
-  //serial.open(portName); // open a serial port
+  serial.list(); // list the serial ports
+  serial.open(portName); // open a serial port
   createCanvas(windowWidth, windowHeight);
   noCursor();
 }
 
-/*function serialEvent() {
+function serialEvent() {
   inData = serial.readStringUntil('\r\n');
   if (inData.length > 0) {
     inData = split(inData, ',');
   }
-}*/
+}
 
 function draw() {
   background(80);
@@ -428,7 +427,7 @@ function keyPressed() {
     splice(0, 1);
   }
 }
-/*
+
 function serialError(err) {
   console.log('Something went wrong with the serial port. ' + err);
 }
@@ -450,4 +449,4 @@ function serverConnected() {
 
 function portOpen() {
   console.log('the serial port opened.')
-}*/
+}
