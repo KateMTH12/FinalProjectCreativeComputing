@@ -120,7 +120,6 @@ function draw() {
   text(letter, x, y);
   n += .002;
   num = noise(n) * width / 5;
-  alph = 30;
   if (inData[0] > 0) {
     colors = C;
     letter = "C";
@@ -201,6 +200,7 @@ function draw() {
       c5.play();
     }
   }
+  alph = 30;
   noStroke();
   for (var k = 0; k < raindrops.length; k++) {
     raindrops[k].drop();
@@ -358,7 +358,7 @@ function keyPressed() {
   if (key === ' ') {
     background(255);
   }
-  raindrops.push(new Rain(i, width / 2, height, x, y));
+  raindrops.push(new Rain(i, x, y));
   blocks.push(new Block(i));
   osc.start(0, notes[i]);
   var freq = midiToFreq(notes[i]);
