@@ -7,7 +7,7 @@
 I changed it so they seek the Letter that pops up when it is played and sort of hovers around the spot so you can see how often  note is played.
 */
 
-function Rain(i, x, y,x1,y1) {
+function Rain(i,x1,y1) {
   this.n = 0.002;
   this.x = random(width);
   this.y = 0;
