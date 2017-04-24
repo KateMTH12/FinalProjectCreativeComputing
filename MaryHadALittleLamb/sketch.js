@@ -218,6 +218,86 @@ function draw() {
   } else if (playing.length === 26) {
     image(p26, (width / 2) - 150, (height / 2) - 100);
   }
+  if (inData[0] > 0) {
+    colors = C;
+    letter = "C";
+    x = random((width / 8));
+    y = random((height / 3), height);
+    i = 0;
+    if (switcher === true) {
+      c.play();
+    }
+  }
+  if (inData[1] > 0) {
+    colors = D;
+    letter = "D";
+    x = random((width / 8), 2 * (width / 7));
+    y = random(height / 3);
+    i = 2;
+    if (switcher === true) {
+      d.play();
+    }
+  }
+  if (inData[2] > 0) {
+    colors = E;
+    letter = "E";
+    x = random(2 * (width / 8), 3 * (width / 7));
+    y = random((height / 3), height);
+    i = 4;
+    if (switcher === true) {
+      e.play();
+    }
+  }
+  if (inData[3] > 0) {
+    colors = F;
+    letter = "F";
+    x = random(3 * (width / 8), 4 * (width / 7));
+    y = random((height / 3), height);
+    i = 5;
+    if (switcher === true) {
+      f.play();
+    }
+  }
+  if (inData[4] > 0) {
+    colors = G;
+    letter = "G";
+    x = random(4 * (width / 8), 5 * (width / 7));
+    y = random((height / 3), height);
+    i = 7;
+    if (switcher === true) {
+      g.play();
+    }
+  }
+  if (inData[5] > 0) {
+    colors = A;
+    letter = "A";
+    x = random(5 * (width / 8), 6 * (width / 7));
+    y = random((height / 3), height);
+    i = 9;
+    if (switcher === true) {
+      a.play();
+    }
+  }
+  if (inData[6] > 0) {
+    colors = B;
+    letter = "B";
+    x = random(6 * (width / 8), 7 * (width / 8));
+    y = random((height / 3), height);
+    i = 11;
+    if (switcher === true) {
+      b.play();
+    }
+  }
+  if (inData[7] > 0) {
+    colors = C1;
+    letter = "C5";
+    x = random(7 * (width / 8), width);
+    y = random((height / 3), height);
+    i = 12;
+    if (switcher === true) {
+      c5.play();
+    }
+  }
   textFont(font);
   stroke(255);
   fill(255);
