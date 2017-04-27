@@ -205,7 +205,7 @@ function draw() {
       c5.play();
     }
   }
-  Add();//Not sure if this will work as I can't try it out but it should make it so the circle and block show as well as the letter and accompanying sound
+  //Add();//Not sure if this will work as I can't try it out but it should make it so the circle and block show as well as the letter and accompanying sound
   alph = 30;
   noStroke();
   for (var k = 0; k < raindrops.length; k++) {
